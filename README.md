@@ -2,8 +2,7 @@
 
 Portfólio pessoal responsivo, desenvolvido em HTML, CSS e JavaScript.
 
-## Contactos
-- Email: kadimaharodi@gmail.com
+## Contacto
 - GitHub: https://github.com/HarodiKadima-dev
 - WhatsApp: +244 951 090 896
 
