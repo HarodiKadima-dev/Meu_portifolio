@@ -26,3 +26,94 @@ body:before{background:radial-gradient(ellipse at 78% 7%,rgba(255,255,255,.035),
 :root[data-theme="light"] .button-primary{color:#fff}
 .theme-toggle{display:grid!important;flex:0 0 auto}
 @media(max-width:680px){.theme-toggle{margin-top:12px;border-radius:30px;width:100%;height:38px}}
+
+/* Ajuste visual final: preto e verde no escuro; claro com verde discreto. */
+:root{
+  color-scheme:dark;
+  --bg:#050706;
+  --surface:#0b100d;
+  --surface-2:#121b15;
+  --text:#f5f8f5;
+  --muted:#b5c0b8;
+  --line:#29372e;
+  --accent:#55c98a;
+  --accent-2:#79e0a7;
+  --accent-soft:rgba(85,201,138,.11);
+  --header:rgba(5,7,6,.94);
+  --shadow:0 22px 65px rgba(0,0,0,.48);
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f3f6f2;
+  --surface:#ffffff;
+  --surface-2:#e8efe8;
+  --text:#18231b;
+  --muted:#4e5f53;
+  --line:#cbd8cd;
+  --accent:#23784b;
+  --accent-2:#185d39;
+  --accent-soft:rgba(35,120,75,.09);
+  --header:rgba(243,246,242,.95);
+  --shadow:0 18px 48px rgba(20,50,30,.10);
+}
+body{font-size:16px;line-height:1.75;overflow-x:clip;}
+body:before{background:radial-gradient(ellipse at 78% 7%,var(--accent-soft),transparent 32%);}
+.nav-link{font-size:12px;}
+.identity strong{font-size:14px;}
+.identity small{font-size:11px;}
+.hero-description,.about-body,.section-lead{font-size:15px;line-height:1.85;}
+.eyebrow,.section-label{font-size:11px;}
+.hero-tags span,.button,.inline-link{font-size:12px;}
+.hero-stats span,.focus-item small,.tool-card span,.ccna-topics p,.project-card p,.feedback-form label,.feedback-form input,.feedback-form select,.feedback-form textarea,.contact-links>a:not(.button),.contact-links>span{font-size:12px;}
+.title-aside,.project-meta,.footer-main>p,.footer-nav a,.footer-bottom{font-size:11px;}
+.portrait-frame{border-color:var(--line);}
+.portrait-glow{background:radial-gradient(ellipse at 55% 45%,var(--accent-soft),transparent 60%);}
+.orbit{border-color:color-mix(in srgb,var(--accent) 22%,transparent);}
+.project-card:hover{border-color:var(--accent);}
+.button-primary{background:var(--accent);border-color:var(--accent);color:#06130b;box-shadow:0 7px 24px color-mix(in srgb,var(--accent) 17%,transparent);}
+.button-primary:hover{background:var(--accent-2);border-color:var(--accent-2);color:#fff;}
+:root[data-theme="light"] .button-primary{color:#fff;}
+.theme-toggle{display:grid!important;flex:0 0 auto;}
+
+/* Previne balanço horizontal no telemóvel sem cortar o conteúdo útil. */
+html,body{max-width:100%;}
+main,.site-header,.footer{max-width:100%;}
+img,video,iframe,svg{max-width:100%;}
+.hero,.hero-copy,.hero-visual,.section,.about-grid,.tool-grid,.project-grid,.feedback-layout,.contact-card,.footer-main{min-width:0;}
+.hero-visual{overflow:clip;}
+.orbit-one,.orbit-two{max-width:100%;}
+.project-image img{object-fit:cover;}
+@media(max-width:950px){
+  .nav-link{font-size:11px;}
+  .hero-description,.about-body,.section-lead{font-size:14px;}
+}
+@media(max-width:680px){
+  html{overflow-x:clip;}
+  .shell{width:calc(100% - 32px);}
+  .site-header,.nav{max-width:100%;}
+  .nav{gap:10px;}
+  .identity{min-width:0;gap:8px;}
+  .identity strong{font-size:12px;}
+  .identity small{font-size:9px;}
+  .monogram{width:34px;font-size:15px;padding-right:8px;}
+  .nav-menu{left:0;right:0;width:100%;max-width:100%;}
+  .hero{width:100%;padding-left:16px;padding-right:16px;overflow:clip;}
+  .hero h1{font-size:clamp(39px,10.5vw,56px);letter-spacing:-2px;overflow-wrap:anywhere;}
+  .hero-role{font-size:14px;line-height:1.6;}
+  .hero-description,.about-body,.section-lead{font-size:14px;line-height:1.8;}
+  .hero-visual{width:100%;min-width:0;}
+  .portrait-frame{width:min(82%,320px);height:360px;}
+  .orbit-one{width:min(100%,340px);height:340px;}
+  .orbit-two{width:min(100%,390px);height:390px;}
+  .portrait-note{max-width:45%;right:0;overflow-wrap:anywhere;}
+  .hero-stats{gap:8px;}
+  .hero-stats span{font-size:10px;line-height:1.45;}
+  .section{padding-block:58px;}
+  .tool-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .tool-card{min-width:0;}
+  .project-image{height:auto;aspect-ratio:1.55;}
+  .project-card,.contact-card,.ccna-panel{min-width:0;}
+  .contact-card{padding:22px 17px;}
+  .footer-bottom{flex-wrap:wrap;}
+  .whatsapp-float{right:12px;bottom:12px;}
+}
